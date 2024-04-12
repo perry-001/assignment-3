@@ -1,44 +1,18 @@
-function printOutput(output) {
-    document.getElementById("result").innerText = "Result: " + output;
-    
-  }
-  
-  
-  
-  function sum() {
-      var num1 = parseFloat(document.getElementById("input1").value) || 0;
-      var num2 = parseFloat(document.getElementById("input2").value) || 0;
-  
-      var result = num1 + num2;
-      printOutput(result);
-  }
-  
-  function subtract() {
-      var num1 = parseFloat(document.getElementById("input1").value) || 0;
-      var num2 = parseFloat(document.getElementById("input2").value) || 0;
-  
-      var result = num1 - num2;
-      printOutput(result);
-  }
-  
-  function multiply() {
-      var num1 = parseFloat(document.getElementById("input1").value) || 0;
-      var num2 = parseFloat(document.getElementById("input2").value) || 0;
-  
-      var result = num1 * num2;
-      printOutput(result);
-  }
-  
-  function division() {
-      var num1 = parseFloat(document.getElementById("input1").value) || 0;
-      var num2 = parseFloat(document.getElementById("input2").value) || 0;
-  
-     
-      if (num2 === 0) {
-          alert("Cannot divide by zero");
-          return;
-      }
-  
-      var result = num1 / num2;
-      printOutput(result);
-  }
+document.addEventListener("DOMContentLoaded", function() {
+    const hatha = document.getElementById("hatha");
+    const vinyasa = document.getElementById("vinyasa");
+    const ashtanga = document.getElementById("ashtanga");
+    const benefits = document.getElementById("benefits");
+
+    hatha.addEventListener("click", function() {
+        benefits.textContent = "Hatha Yoga focuses on physical postures and breathing exercises.";
+    });
+
+    vinyasa.addEventListener("click", function() {
+        benefits.textContent = "Vinyasa Yoga synchronizes movement with breath, creating a flowing sequence of poses.";
+    });
+
+    ashtanga.addEventListener("click", function() {
+        benefits.textContent = "Ashtanga Yoga is a dynamic, physically demanding practice that follows a specific sequence of postures.";
+    });
+});
